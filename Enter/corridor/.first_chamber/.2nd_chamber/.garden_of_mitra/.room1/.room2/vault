@@ -1,0 +1,46 @@
+#!/usr/bin/env bash 
+
+key="76.45161290322580645161"
+: 237 / 3.1
+
+if [[ $1 != $key ]]; then
+	echo -e "You must enter the correct floating point key value\n"
+	echo -e "Enter the result of 237 / 3.1 as \$1\n"
+else
+	echo -e "Well done! Collect your loot!\n" 
+fi
+
+
+mv .chamber_of_loss chamber_of_loss 2>/dev/null
+
+cat <<'EOF' > functions
+A shell function, stores a
+
+series of commands for later execution.
+
+When the name of a shell function is
+
+used as a simple command name, 
+
+the list of commands associated with that
+
+function name is executed.
+
+As an example, we can create a function that lists
+
+the directory contents right after we 'cd' into it.
+
+```
+cs ()
+{
+    cd $* && ls
+}
+```
+to type that in a single line:
+
+« cs() { cd $* && ls; } »
+
+type the above line into your terminal and use the 'cs' 
+
+command to 'cd' into the chamber_of_loss directory
+EOF
