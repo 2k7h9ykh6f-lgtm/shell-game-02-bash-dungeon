@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+cat <<EOF
+
+  ╔══════════════════════════════════════╗
+  ║        THE SEALED TOME               ║
+  ╠══════════════════════════════════════╣
+  ║                                      ║
+  ║  Speak the number of the architects  ║
+  ║  to unseal this tome.                ║
+  ║                                      ║
+  ║  Run:  ./sealed_tome <number>        ║
+  ║                                      ║
+  ╚══════════════════════════════════════╝
+
+EOF
+
+if [[ $1 != 7 ]]; then
+	if [[ -z $1 ]]; then
+		echo -e "The tome remains silent. You must provide a number.\n"
+	else
+		echo -e "The seal glows red. Wrong number.\n"
+	fi
+	exit 0
+fi
+
+cat <<EOF
+
+The seal glows gold and the tome opens!
+
+You discover the Chronicle of the Seven Architects:
+
+  "In the age before memory, seven builders carved
+   this dungeon from living stone. Each one laid
+   a chamber, and each chamber held a lesson.
+
+   The dungeon was not a prison, but a school.
+   Those who mastered its secrets would emerge
+   not as prisoners, but as builders themselves."
+
+You have uncovered the truth of the bash-dungeon.
+
+EOF
+
+cat <<'EOF' >builders_medallion
+ ___________________________
+|                           |
+|   MEDALLION OF THE SEVEN  |
+|      ARCHITECTS           |
+|                           |
+|   You have completed the  |
+|   Forgotten Archive.      |
+|                           |
+|   Add it to your legend:  |
+|                           |
+|   export I=medallion,$I   |
+|                           |
+|___________________________|
+EOF
+
+echo -e "You received the Medallion of the Seven Architects!\n"
+echo -e "Add it to your inventory:\n"
+echo -e "« export I=medallion,\$I »\n"

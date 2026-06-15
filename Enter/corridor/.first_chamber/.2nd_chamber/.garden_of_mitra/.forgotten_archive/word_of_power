@@ -1,0 +1,27 @@
+ __________________________________________________________
+/\                                                         \
+\_|                                                        |
+  | The 'find' command is one of the most powerful         |
+  | tools in the shell.                                    |
+  |                                                        |
+  | It searches for files and directories that match       |
+  | a pattern you describe.                                |
+  |                                                        |
+  | Basic usage:                                           |
+  |                                                        |
+  | « find . -name 'pattern' »                             |
+  |                                                        |
+  | The dot means "start searching from here."             |
+  | The -name flag matches file names.                     |
+  |                                                        |
+  | You can search for hidden files too:                   |
+  |                                                        |
+  | « find . -name '.*' »                                  |
+  |                                                        |
+  | To search the entire dungeon, return to the            |
+  | entrance:                                              |
+  |                                                        |
+  | « find ~/bash-dungeon/Enter -name '*.fragment' »       |
+  |                                                        |
+  |   _____________________________________________________|_
+   \_/_______________________________________________________/

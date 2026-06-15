@@ -1,0 +1,27 @@
+ __________________________________________________________
+/\                                                         \
+\_|                                                        |
+  | The Forgotten Archive                                  |
+  |                                                        |
+  | Dust covers every surface. Scrolls older than the      |
+  | dungeon itself line the walls.                         |
+  |                                                        |
+  | This place was built by the original architects.       |
+  |                                                        |
+  | Somewhere in the dungeon, a fragment of their          |
+  | knowledge remains hidden.                              |
+  |                                                        |
+  | To find it, you will need a new tool.                  |
+  | Return to the entrance and use:                        |
+  |                                                        |
+  | « find . -name '*.fragment' »                          |
+  |                                                        |
+  | The 'find' command searches through every room         |
+  | and passage, uncovering what the eye cannot see.       |
+  | The dot means: start searching from here.              |
+  |                                                        |
+  | Find the fragment. Read it. Then return here           |
+  | and speak the word of power to the sealed tome.        |
+  |                                                        |
+  |   _____________________________________________________|_
+   \_/_______________________________________________________/
