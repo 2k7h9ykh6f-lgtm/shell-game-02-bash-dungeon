@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# A loose brick, hidden from careless eyes (you found it with 'ls -a').
+# You INSPECTED before acting -- the mark of a careful crawler.
+# Pressing it is SAFE: it only opens the hidden passage out of this room.
+# It deletes nothing and touches nothing outside this very room.
+
+cat <<'EOF'
+
+You run your fingers along the wall and feel a LOOSE BRICK,
+
+hidden from any careless torch. You found it by looking for what
+
+others miss -- « ls -a » -- and you INSPECTED it before pressing.
+
+You press it firmly...
+
+  *** GRRRRIND ***  A concealed passage opens in the far wall!
+
+EOF
+
+# Reveal the hidden safe passage (in-room rename only; no rm, nothing outside).
+mv .safe_passage safe_passage 2>/dev/null
+
+cat <<'EOF' > scroll_of_knowledge
+==================  SCROLL OF SAFE PASSAGE  ==================
+
+You survived the Trap Room. Here is why:
+
+  * « ls -a » revealed what a careless torch could not --
+    files and rooms whose names begin with a dot are HIDDEN,
+    not gone. The careful always check.
+
+  * You INSPECTED before you acted:
+        « file name »      tells you WHAT a thing is.
+        « head -n 1 name » peeks inside; a '#!' means a script.
+    You never run a script -- or open a chest -- blindly.
+
+  * The obvious, shiny path ( the cursed_chest, the dead_end )
+    was BAIT. The true way out was hidden, and safe.
+
+Carry this rule with you for every dungeon to come:
+
+        LOOK before you LEAP.  INSPECT before you ACT.
+
+A new passage has opened. Step through it:  « cd safe_passage »
+=============================================================
+EOF
+
+echo "A « scroll_of_knowledge » materializes at your feet -- read it: « cat scroll_of_knowledge »"
+echo "A new passage has opened: « cd safe_passage »"

@@ -1,0 +1,32 @@
+======================  THE TRAP ROOM  ======================
+
+So. You found the hidden door. Clever.
+
+But the cleverness that got you IN will not get you OUT.
+
+This room punishes the careless. Two temptations sit in plain sight:
+
+  1. A « cursed_chest » -- shiny, obvious, begging to be opened.
+  2. An open door marked « dead_end » -- a path that invites you in.
+
+BOTH are bait. Open or enter them blindly and the trap will spring.
+
+(Fear not -- every trap here is an illusion of the dungeon.
+
+ Nothing on your real disk will ever be harmed or deleted.)
+
+The dungeon's oldest rule still holds:
+
+  * INSPECT before you act. Identify things first:
+        « file * »
+        « head -n 1 cursed_chest »
+    If you see a '#!', it is a script -- know what it does before you run it.
+
+  * The TRUE way out is not in plain sight.
+    Brighten your torch to find what is hidden:
+        « ls -a »
+
+Find the hidden clue. Confirm it is safe. THEN use it.
+
+That is how the careful escape -- and how the careless are trapped.
+=============================================================

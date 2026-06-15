@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# !!! WARNING !!!  This "chest" is a MIMIC -- a trap in disguise.
+# If you are reading this with 'cat' or 'head', well done: you INSPECTED
+# before opening. That is exactly how you survive this room.
+# Running it springs the trap (harmlessly). The real way out is HIDDEN.
+# This script deletes nothing and touches nothing outside this room.
+
+cat <<'EOF'
+
+  ____________________________
+ /                            \
+ |  You reach for the chest... |
+ \____________________________/
+
+SNAP!  The lid was a MIMIC's jaws!  It was a TRAP all along!
+
+EOF
+
+if [[ -z $HP ]]; then
+	echo -e "The trap lunges at you -- but you never set your HP to play!\n"
+else
+	(( HP -= 2 ))
+	echo -e "The mimic snaps shut on your hand. You take 2 damage."
+	echo -e "Your HP is: $HP\n"
+fi
+
+cat <<'EOF'
+But take heart: this is only a trick of the dungeon.
+
+NOTHING on your real disk was touched. No files were deleted.
+
+Your treasures -- and your home -- are exactly as you left them.
+
+  >> Retreat now:           « cd .. »
+  >> Then look before you leap. The careless open chests blindly.
+  >> The wise INSPECT first ( file / head -n 1 ) and reveal the
+     hidden path with « ls -a ».
+
+The true way out of this room was never the shiny, obvious one.
+EOF
