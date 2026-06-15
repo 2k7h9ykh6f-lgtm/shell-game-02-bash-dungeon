@@ -1,0 +1,23 @@
+ _____________________________________________________________
+/\                                                            \
+\_| THE REWARD VAULT                                          |
+  |                                                            |
+  | Within rests a small, glowing token --                     |
+  | the SIGIL OF THE SEEKER.                                    |
+  |                                                            |
+  | You earned it with a spell few bother to learn:            |
+  |                                                            |
+  |   « find » -- the power to search every room at once.      |
+  |                                                            |
+  | Keep this page in your spellbook:                          |
+  |                                                            |
+  |   « find . -name 'NAME' »    match by exact name           |
+  |   « find . -iname 'name' »   ignore upper/lower case        |
+  |   « find . -type d »         list only rooms (directories)  |
+  |   « find . -type f »         list only items (files)       |
+  |                                                            |
+  | This side-path is complete. The main dungeon still         |
+  | awaits beyond the corridor -- your true quest is not       |
+  | yet done. Onward!                                          |
+  |   __________________________________________________________|_
+   \_/____________________________________________________________/

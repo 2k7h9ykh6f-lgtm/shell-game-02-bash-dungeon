@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+cat <<EOF
+
+You lay the rune-stone upon the altar. It sinks flush into a
+carved socket, and with a grind of ancient stone, a sealed
+alcove yawns open in the wall.
+
+  +---------------------------------------------+
+  |  THE SEAL IS BROKEN. A NEW PATH OPENS.      |
+  +---------------------------------------------+
+
+A REWARD VAULT has appeared in this room.
+
+  « ls »               to see the new path
+  « cd reward_vault »  to enter it
+  « cat treasure »     to claim your reward
+
+Well done, seeker. Few ever find the rune.
+
+EOF
+
+mv .reward_vault reward_vault 2>/dev/null

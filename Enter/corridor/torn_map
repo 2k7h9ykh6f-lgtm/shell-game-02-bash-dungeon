@@ -1,0 +1,25 @@
+ ___________________________________________________________________
+/\                                                                  \
+\_| You pick up a torn, water-stained map.                          |
+  |                                                                  |
+  | Scrawled in the margin:                                          |
+  |   "Beyond the known rooms lies a sealed CRYPT. Its key is a      |
+  |    RUNE-STONE, hidden deep where no torch reaches.               |
+  |    Light alone will not reveal it."                              |
+  |                                                                  |
+  | A new spell is needed: « find ».                                 |
+  | It searches a whole TREE of rooms at once, by NAME.              |
+  |                                                                  |
+  | From here, cast:                                                 |
+  |                                                                  |
+  |   « find . -name '.rune_stone' »                                 |
+  |                                                                  |
+  | The « . » means: "search from the room I stand in, and every     |
+  | room below it". « -name » matches a file by its exact name.      |
+  |                                                                  |
+  | The leading dot makes the rune hidden, so a plain « ls » is      |
+  | blind to it -- but « find » is not.                              |
+  |                                                                  |
+  | Follow the path it reveals, then « cat » the rune-stone.         |
+  |   _______________________________________________________________|_
+   \_/_________________________________________________________________/

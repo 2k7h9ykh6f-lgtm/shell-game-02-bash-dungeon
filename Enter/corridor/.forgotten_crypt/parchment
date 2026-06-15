@@ -1,0 +1,21 @@
+ ______________________________________________________________
+/\                                                             \
+\_| THE FORGOTTEN CRYPT                                        |
+  |                                                             |
+  | Dust of ages coats the floor. You are the first to stand    |
+  | here in a very, very long time.                             |
+  |                                                             |
+  | At the room's heart stands an ALTAR.                        |
+  |                                                             |
+  | You have learned to be cautious with strange objects.       |
+  | Before you touch it, IDENTIFY it first:                     |
+  |                                                             |
+  |   « file altar »                                            |
+  |   « head -n 1 altar »                                       |
+  |                                                             |
+  | If it is a script (it starts with '#!'), you may invoke     |
+  | it by preceding its name with « ./ » :                      |
+  |                                                             |
+  |   « ./altar »                                               |
+  |   ___________________________________________________________|_
+   \_/_____________________________________________________________/
