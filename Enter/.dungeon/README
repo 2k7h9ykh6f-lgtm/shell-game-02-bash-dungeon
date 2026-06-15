@@ -1,0 +1,69 @@
+Bash Dungeon - Progressive Hint System
+======================================
+
+Enable it (optional):
+
+    source .dungeon/hint.sh
+
+Then, in any room:
+
+    hint        reveal the next clue (run again for a more explicit one)
+    hint N      jump straight to clue number N
+    hint reset  forget how many clues you've seen in this room
+    unhint      stop the automatic "stuck?" nudges
+
+The engine also OFFERS a clue automatically (it never reveals one for you):
+
+  - after you mistype several commands in a room  (HINT_MISS_THRESHOLD,   default 3)
+  - after you linger in a room for several prompts (HINT_LINGER_THRESHOLD, default 8)
+
+
+How hints are stored
+--------------------
+Each room keeps its clues in a plain text file named `.hints`. Clues are
+written in escalating tiers - vague first, explicit last:
+
+    # .hints - progressive hints for this room
+    [1] A nudge: what to notice, without naming the spell.
+    [2] Narrower: which spell or idea applies.
+    [3] The command SHAPE - but never the puzzle's literal answer.
+
+Rules:
+  * A tier begins with a line like `[1]` and continues (over several lines
+    if you wish) until the next `[N]` marker or the end of the file.
+  * Number the tiers from 1 upward, in order.
+  * SPOILER RULE: the final tier may show the command pattern (for example
+    `wc -l <file>`, `grep -i 'word' <file>`, `./vault <answer>`), but it must
+    NOT contain the literal value the puzzle is testing for (a line count, a
+    discovered key, an arithmetic result). The player should still have to
+    take the last step themselves.
+
+
+Reusing the mechanism in another room
+-------------------------------------
+There is nothing to wire up. To give ANY room progressive hints, just create
+a `.hints` file in that directory using the format above. The engine finds it
+automatically from your current location ($PWD), tracks your tier and your
+miss / linger counters per room, and reveals clues on demand. The same `hint`
+command works in every room.
+
+  * To add hints to a new room:      create `<room>/.hints`
+  * To remove them:                  delete that `.hints` file
+  * Without sourcing the engine:     the game is still fully playable, and you
+                                     can read any room's clues with `cat .hints`
+
+
+Tunables (set before sourcing, or any time afterwards)
+------------------------------------------------------
+    HINT_MISS_THRESHOLD     mistypes before an auto-offer    (default 3)
+    HINT_LINGER_THRESHOLD   prompts in-room before an offer  (default 8)
+    HINT_STATE_DIR          where per-room progress is kept
+                            (default: $TMPDIR/bash-dungeon-hints)
+
+
+Notes
+-----
+  * Works in bash and zsh.
+  * The engine is read-only: it only parses `.hints` files and tracks
+    counters. It never runs or edits the dungeon's puzzle scripts, and it
+    uses no `eval`.

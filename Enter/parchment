@@ -17,3 +17,6 @@
   | « alias ls='ls -F' »                                            |
   |   ______________________________________________________________|_
    \_/________________________________________________________________/
+
+  (Optional) Stuck on a puzzle? Enable progressive hints:
+  « source .dungeon/hint.sh »   then type « hint » whenever you need a clue.

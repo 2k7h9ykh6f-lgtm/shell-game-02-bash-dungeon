@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] The ground here wounds you, and a merchant wants something you read a few rooms ago. Prepare to survive before you bargain.
+[2] The thorns drain your `HP`, so set an `HP` value first, then trigger them. The potioneer trades for the poem; you can hand a thing to a script by writing it after the command (its first argument, `$1`).
+[3] Set health with `export HP=10` (any number) and run `./thorns`. Then trade for a potion with `./potioneer poem`. (This room also teaches `cp` - copy a file you left behind into the current room with `cp ../<file> .`.)

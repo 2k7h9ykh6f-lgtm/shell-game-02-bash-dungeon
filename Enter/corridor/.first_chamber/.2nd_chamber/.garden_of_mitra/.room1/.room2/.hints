@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] The vault asks for the answer to a small sum, and it wants it the moment you open it - not typed in afterwards.
+[2] Hand the answer to the script as its first argument (`$1`). You need 237 divided by 3.1, as a decimal.
+[3] Compute it (for example `echo "237 / 3.1" | bc -l`, or `awk 'BEGIN{print 237/3.1}'`), then open the vault with `./vault <that result>`. (Pass the number as `$1`; work it out yourself.)

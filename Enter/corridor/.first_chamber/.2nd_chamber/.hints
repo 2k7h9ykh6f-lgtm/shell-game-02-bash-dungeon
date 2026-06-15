@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] The chest here is locked and wants a number. That number is hiding in something else in this room.
+[2] The key is the poem's length, measured in lines. There is a spell that counts lines, and you can feed one command's output into it with a pipe `|`.
+[3] Count the lines with `cat poem | wc -l` (or `wc -l poem`). Then run `./chest` and type that number as the key. (Work the number out yourself, then unlock.)

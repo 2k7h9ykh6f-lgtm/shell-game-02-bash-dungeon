@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] There is a mechanism here begging to be pulled. Pull it, and something new will appear a few rooms back.
+[2] The lever is a script - read it, then run it from this room. Afterwards, go looking with `ls` and `cd` for what changed.
+[3] Pull it with `./lever`. Then look a few directories back (`cd ..` then `ls`) to find the new area it opened. (The scrolls here also teach `alias`, and how to delete safely - treat `rm` with great care.)

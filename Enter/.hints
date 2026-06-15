@@ -1,0 +1,3 @@
+# .hints - progressive hints for this room
+[1] New here? Everything in this dungeon is either a file or a room (a directory). Look before you leap.
+[2] Look around with `ls`. Read any writing with `cat parchment`. Enter a room with `cd <room>`, and step back out with `cd ..`.

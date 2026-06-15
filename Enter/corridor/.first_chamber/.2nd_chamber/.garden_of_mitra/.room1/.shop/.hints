@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] The shopkeeper cannot truly do business with you - a script he runs in his own pocket cannot reach into yours.
+[2] A normal script runs in its own sub-shell and cannot change your variables. To let it touch your `gold`, you must *source* it instead of running it. Make sure `gold` is set first.
+[3] If needed, set coins with `export gold=10`, then source the keeper: `source ./shopkeeper` (or `. ./shopkeeper`).

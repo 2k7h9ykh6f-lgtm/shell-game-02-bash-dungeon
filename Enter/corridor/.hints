@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] Some objects here are not what they appear. Before you touch anything, find out *what* each one is.
+[2] Two spells reveal a file's nature: one names its type, another peeks at its first line. (Think `file`, or `head -n 1`.)
+[3] `file chest` (or `head -n 1 chest`) shows it is a script. Read it first with `cat chest`, then run a script from the current room with `./chest`.

@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] A chest here wants a key, and that key is hidden in plain sight inside a wall of nonsense text.
+[2] A new spell *grabs* the lines that match a word in a file. The key sits on the line that mentions "pass". (Think `grep`.)
+[3] Reveal it with `grep -i 'pass' LoremIpsum`, then run `./chest` and enter the key you found. (Find the value yourself; do not guess.)

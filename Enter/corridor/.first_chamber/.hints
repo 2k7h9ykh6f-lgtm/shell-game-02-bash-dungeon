@@ -1,0 +1,4 @@
+# .hints - progressive hints for this room
+[1] Something in here is alive and unfriendly. You will not get past it empty-handed.
+[2] There is a weapon in this room. The game remembers what you are holding in a variable named `I`. Make sure it holds your weapon before you fight.
+[3] Pick up the blade with `export I=short_sword`, then face the foe with `./rat` and choose to attack. (Equip a weapon first, or the fight will not start.)
