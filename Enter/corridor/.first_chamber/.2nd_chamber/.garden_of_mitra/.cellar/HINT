@@ -1,0 +1,20 @@
+The tomes are old and the runes are well hidden.
+
+If you are lost, try searching each tome for the word 'RUNE':
+
+« grep 'RUNE' dusty_tome_1 »
+
+You can also search all tomes at once using a wildcard:
+
+« grep 'RUNE' dusty_tome_* »
+
+The -h flag suppresses filenames in the output:
+
+« grep -h 'RUNE' dusty_tome_* »
+
+Beware of false markings! Use the ^ anchor to match only
+lines that BEGIN with 'RUNE:':
+
+« grep '^RUNE:' dusty_tome_* »
+
+Remember: the password is the three rune words joined by dashes.

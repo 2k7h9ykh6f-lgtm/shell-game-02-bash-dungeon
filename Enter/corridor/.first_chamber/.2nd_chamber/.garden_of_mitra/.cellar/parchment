@@ -1,0 +1,31 @@
+ ________________________________________________________________________
+/\                                                                        \
+\_|                                                                      |
+  |  THE FORGOTTEN ARCHIVES                                              |
+  |                                                                      |
+  |  You descend into a vast underground library.                        |
+  |                                                                      |
+  |  Dusty tomes line the shelves from floor to ceiling.                 |
+  |                                                                      |
+  |  Ancient runes of power are hidden within the pages                  |
+  |                                                                      |
+  |  of these forgotten texts.                                           |
+  |                                                                      |
+  |  Your task:                                                          |
+  |                                                                      |
+  |  1. Use 'find' to locate the dusty tomes scattered about.           |
+  |                                                                      |
+  |  2. Use 'grep' to search each tome for hidden RUNE markers.         |
+  |                                                                      |
+  |  3. Assemble the three rune words into a single password            |
+  |                                                                      |
+  |     separated by dashes: RUNE1-RUNE2-RUNE3                          |
+  |                                                                      |
+  |  4. Enter the password into the chest to unlock the                 |
+  |                                                                      |
+  |     restricted section of the archives.                              |
+  |                                                                      |
+  |  Read the 'word_of_power' to learn a new spell before you begin.    |
+  |                                                                      |
+  |   ___________________________________________________________________|_
+   \_/_____________________________________________________________________/

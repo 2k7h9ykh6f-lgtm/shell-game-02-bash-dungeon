@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+echo -e "The ancient chest hums with dormant magic.\n"
+echo "Enter the password assembled from the three runes:"
+echo "(Format: RUNE1-RUNE2-RUNE3)"
+echo ""
+read -r val
+
+unlock(){
+lock_val="ARCANE-FLAME-SHADOW"
+if [[ $val != "$lock_val" ]]; then
+	echo ""
+	echo "The chest remains sealed."
+	echo "The runes must be assembled correctly. Search the tomes again."
+	echo ""
+	echo "Hint: Use 'grep' to find lines marked with 'RUNE:' in each dusty tome."
+	exit 0
+else
+	echo ""
+	echo "========================================================================="
+	echo "  The chest bursts open with a flash of light!"
+	echo ""
+	echo "  You have proven yourself a master of searching and finding."
+	echo ""
+	echo "  The restricted section of the archives is now open to you."
+	echo "  A scroll of knowledge awaits within."
+	echo "========================================================================="
+	echo ""
+fi
+
+mv .restricted_section restricted_section 2>/dev/null
+
+cat <<'EOF' >restricted_section/scroll_of_knowledge
+ /"\/\_..-------------------------------------------------------------------------------._/\/"\
+(     _||                                                                              ||_     )
+ \_/\/ ||                                                                              || \/\_/
+       ||  ADVANCED SEARCHING: grep -r and find + grep                                 ||
+       ||                                                                              ||
+       ||  Now that you know 'grep' and 'find' separately,                             ||
+       ||                                                                              ||
+       ||  here is how to combine them for true power:                                 ||
+       ||                                                                              ||
+       ||  « grep -r "pattern" . »                                                     ||
+       ||                                                                              ||
+       ||  This searches ALL files in the current directory and                        ||
+       ||  every subdirectory beneath it. The -r flag means 'recursive'.             ||
+       ||                                                                              ||
+       ||  You can also combine find and grep together:                                ||
+       ||                                                                              ||
+       ||  « find . -name "*.txt" -exec grep "pattern" {} \; »                        ||
+       ||                                                                              ||
+       ||  This finds all .txt files and then runs grep on each one.                  ||
+       ||  The {} is replaced by each filename that find discovers.                  ||
+       ||                                                                              ||
+       ||  Other useful grep flags:                                                    ||
+       ||                                                                              ||
+       ||  « grep -i "pattern" file »   — case insensitive search                    ||
+       ||  « grep -n "pattern" file »   — show line numbers                           ||
+       ||  « grep -c "pattern" file »   — count matching lines                        ||
+       ||  « grep -v "pattern" file »   — show lines that do NOT match               ||
+       ||                                                                              ||
+ /"\/\_|--------------------------------------------------------------------------------|_/\/"\
+(     _|                                                                                |_     )
+ \_/\/ `--------------------------------------------------------------------------------' \/\_/
+EOF
+
+}
+unlock

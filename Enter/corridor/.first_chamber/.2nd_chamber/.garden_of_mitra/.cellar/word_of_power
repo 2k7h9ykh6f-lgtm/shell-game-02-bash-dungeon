@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------------------------
+--                                                                                     --
+-- word of power is 'find'                                                             --
+--                                                                                     --
+-- 'find' lets you search for files and directories by name, type, or pattern.        --
+--                                                                                     --
+-- Think of it as sending a scout to explore every shelf and corner of the dungeon.    --
+--                                                                                     --
+-- To find files by name:                                                              --
+-- « find . -name "pattern" »                                                          --
+--                                                                                     --
+-- To find only files (not directories):                                               --
+-- « find . -type f »                                                                  --
+--                                                                                     --
+-- To find files matching a wildcard:                                                  --
+-- « find . -name "dusty*" »                                                           --
+--                                                                                     --
+-- 'find' locates the files. 'grep' searches inside them.                              --
+--                                                                                     --
+-- Together, they are the most powerful scouting duo in the dungeon.                   --
+--                                                                                     --
+-- Try it now:                                                                         --
+-- « find . -name "dusty*" »                                                           --
+--                                                                                     --
+-----------------------------------------------------------------------------------------
