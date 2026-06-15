@@ -1,6 +1,18 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
+
+# Source the progressive hint engine
+_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$_SCRIPT_DIR/../../../../../hint_engine.sh"
 
 echo -e "This chest is locked!\nYou need the proper key to enter!"
+
+# Define progressive hints (vague -> specific, never the direct answer)
+HINT_L0="Somewhere in this room, a wall of text hides a secret word. Look carefully..."
+HINT_L1="Not all text is what it seems. A search tool can find hidden patterns in a sea of words."
+HINT_L2="Try using grep with a case-insensitive flag to search the LoremIpsum file for something unusual."
+HINT_L3="The word you seek starts with 'P' and is hidden in LoremIpsum. Try: grep -i '???' LoremIpsum"
+
+init_hint "grep_chest"
 
 echo "Enter Key value: "
 read -r val
@@ -9,9 +21,12 @@ unlock(){
 lock_val=256
 if [[ $val != "$lock_val" ]]; then
 	echo "Wrong!"
+	increment_hint "grep_chest"
+	show_hint "grep_chest" "$HINT_L0" "$HINT_L1" "$HINT_L2" "$HINT_L3"
 	exit 0
 else
 	echo "Correct! You found a scroll of knowledge!"
+	reset_hint "grep_chest"
 	cat <<'EOF' >scroll_of_knowledge
  /"\/\_..-------------------------------------------------------------------------------._/\/"\
 (     _||                                                                              ||_     )

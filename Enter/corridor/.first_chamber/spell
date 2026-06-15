@@ -1,0 +1,8 @@
+###############################################
+# « cat filename  | wc -l »                   #
+#                                             #
+# There are many ways to count words or lines #
+#                                             #
+# in the shell. This is one of them.          #
+#                                             #
+###############################################

@@ -1,13 +1,27 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
+
+# Source the progressive hint engine
+_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$_SCRIPT_DIR/../../../../../../hint_engine.sh"
 
 key="76.45161290322580645161"
 : 237 / 3.1
 
+# Define progressive hints (vague -> specific, never the direct answer)
+HINT_L0="A precise calculation is needed here. Numbers hold the key..."
+HINT_L1="The shell struggles with decimals. There is a tool that can handle floating-point arithmetic."
+HINT_L2="Try piping a division expression into bc -l for precise decimal math."
+HINT_L3="Pass the result as an argument: echo '??? / ???' | bc -l, then run: ./vault <result>"
+
+init_hint "float_vault"
+
 if [[ $1 != $key ]]; then
 	echo -e "You must enter the correct floating point key value\n"
-	echo -e "Enter the result of 237 / 3.1 as \$1\n"
+	increment_hint "float_vault"
+	show_hint "float_vault" "$HINT_L0" "$HINT_L1" "$HINT_L2" "$HINT_L3"
 else
-	echo -e "Well done! Collect your loot!\n" 
+	echo -e "Well done! Collect your loot!\n"
+	reset_hint "float_vault"
 fi
 
 
@@ -20,7 +34,7 @@ series of commands for later execution.
 
 When the name of a shell function is
 
-used as a simple command name, 
+named as a simple command name,
 
 the list of commands associated with that
 
@@ -40,7 +54,7 @@ to type that in a single line:
 
 « cs() { cd $* && ls; } »
 
-type the above line into your terminal and use the 'cs' 
+type the above line into your terminal and use the 'cs'
 
 command to 'cd' into the chamber_of_loss directory
 EOF

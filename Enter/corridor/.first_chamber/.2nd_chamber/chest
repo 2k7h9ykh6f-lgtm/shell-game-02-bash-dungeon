@@ -1,17 +1,29 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
+
+# Source the progressive hint engine
+_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$_SCRIPT_DIR/../../../hint_engine.sh"
 
 lock_val=$(cat poem | wc -l)
 
 cat <<EOF >../spell
 ###############################################
 # « cat filename  | wc -l »                   #
-#                                             #     
+#                                             #
 # There are many ways to count words or lines #
 #                                             #
 # in the shell. This is one of them.          #
 #                                             #
 ###############################################
 EOF
+
+# Define progressive hints (vague -> specific, never the direct answer)
+HINT_L0="The poem holds a secret number within its verses... perhaps you should count them."
+HINT_L1="There are shell commands that can count lines in a file. Look around this room."
+HINT_L2="Try combining two commands with a pipe: cat <filename> | wc <flag>"
+HINT_L3="The poem is in this very chamber. Count its lines: cat ??? | wc -l"
+
+init_hint "poem_chest"
 
 echo -e "This chest is locked!\nYou need the proper key to enter!"
 
@@ -20,10 +32,12 @@ read -r val
 
 
 if [[ $val != "$lock_val" ]]; then
-	echo "Wrong!"
+	increment_hint "poem_chest"
+	show_hint "poem_chest" "$HINT_L0" "$HINT_L1" "$HINT_L2" "$HINT_L3"
 	exit 0
 else
 	echo "Correct! You found 10 gold coins!"
+	reset_hint "poem_chest"
 fi
 
 cat <<EOF >gold
