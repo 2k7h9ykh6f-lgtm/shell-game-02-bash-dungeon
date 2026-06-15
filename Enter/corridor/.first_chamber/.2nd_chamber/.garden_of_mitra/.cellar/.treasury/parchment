@@ -1,0 +1,24 @@
+ __________________________________________________________________
+/\                                                                 \
+\_|                                                                |
+  | THE CELLAR TREASURY                                            |
+  |                                                                |
+  | The door gives way and golden light spills across the floor.  |
+  |                                                                |
+  | You found every rune by sweeping the cellar with a single     |
+  | spell, instead of carrying your torch shelf by shelf.         |
+  |                                                                |
+  | You have learned to:                                          |
+  |   - search by name      « find . -name 'keystone.rune' »      |
+  |   - search by pattern   « find . -name '*.rune' »             |
+  |   - search only files   « find . -type f »                    |
+  |   - search only rooms   « find . -type d »                    |
+  |   - ignore letter case  « find . -iname '*.RUNE' »            |
+  |                                                                |
+  | find even reached the shard hidden behind the jars -- it      |
+  | walks into nested and hidden rooms so you don't have to.      |
+  |                                                                |
+  | You have reached the current frontier of the dungeon.         |
+  | Rest here, brave crawler. More chambers await in time...      |
+  |   _____________________________________________________________|_
+   \_/_______________________________________________________________/

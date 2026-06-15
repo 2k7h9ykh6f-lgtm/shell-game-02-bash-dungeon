@@ -1,0 +1,4 @@
+ A dusty cellar ledger. NOT a rune, and it has no extension.
+
+ « find . -type f » would list it among the files,
+ but « find . -name '*.rune' » will not. Do not count it.

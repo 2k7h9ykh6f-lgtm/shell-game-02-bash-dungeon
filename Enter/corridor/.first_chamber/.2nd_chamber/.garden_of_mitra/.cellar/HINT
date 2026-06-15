@@ -1,0 +1,17 @@
+   ##########################################################################
+   #                                                                        #
+   # The 'find' spell -- quick reference:                                   #
+   #                                                                        #
+   # « find . -name 'keystone.rune' »  find one thing by its exact name     #
+   # « find . -name '*.rune' »         find everything ending in .rune      #
+   # « find . -type f »                find only files                       #
+   # « find . -type d »                find only directories (rooms)         #
+   # « find . -iname '*.RUNE' »        like -name, but ignores letter case   #
+   #                                                                        #
+   # The « * » is a wildcard: it stands in for any run of characters.       #
+   # find walks into nested rooms for you -- even hidden ones.              #
+   #                                                                        #
+   # Tip: pipe the results to « wc -l » to COUNT them:                      #
+   # « find . -name '*.rune' | wc -l »                                      #
+   #                                                                        #
+   ##########################################################################

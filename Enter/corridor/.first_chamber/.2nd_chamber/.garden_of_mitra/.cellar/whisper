@@ -1,0 +1,23 @@
+ A whisper drifts between the barrels...
+
+ "Four shards of power -- runes -- lie scattered in this cellar.
+
+  Some rest deep inside nested racks. One hides in the dark,
+  behind the jars, where only a thorough search will reach it.
+
+  A torch shows but one shelf. The 'find' spell sweeps them all.
+
+  Sweep the cellar for every '.rune' shard and COUNT what you find:
+
+  « find . -name '*.rune' | wc -l »
+
+  The number of shards is the key that opens the cellar door.
+
+  Beware: not everything down here is a rune. Wine notes and old
+  ledgers will try to fool a careless count -- match only '*.rune'.
+
+  One shard, the keystone, even bears its own name. Seek it by name:
+
+  « find . -name 'keystone.rune' »
+
+  When you know the number, work the « door » in this room."

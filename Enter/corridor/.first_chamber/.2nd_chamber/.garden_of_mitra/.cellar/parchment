@@ -1,0 +1,23 @@
+ ____________________________________________________________________
+/\                                                                   \
+\_|                                                                   |
+  | You descend the creaking steps into the Cellar.                   |
+  |                                                                   |
+  | It is vast, cluttered and pitch black. Barrels, wine racks and    |
+  |                                                                   |
+  | dusty shelves stretch further than your torch can reach.          |
+  |                                                                   |
+  | Your torch (the « ls » spell) lights only ONE shelf at a time.    |
+  |                                                                   |
+  | To search the WHOLE cellar at once, you need a new spell: 'find'. |
+  |                                                                   |
+  | « find . -name 'thing' »                                          |
+  |                                                                   |
+  | The « . » means "start searching here, in this room".             |
+  | « -name » tells find to match a thing by its name.                |
+  | find then searches this room AND every room nested inside it,     |
+  | so nothing stays hidden from a thorough search.                   |
+  |                                                                   |
+  | Read the « whisper » in this room to learn what you must seek.    |
+  |   ________________________________________________________________|_
+   \_/__________________________________________________________________/

@@ -1,0 +1,4 @@
+ Just an old wine note. This is NOT a rune.
+
+ « find . -name '*.rune' » will skip this file,
+ because its name does not end in .rune. Do not count it.

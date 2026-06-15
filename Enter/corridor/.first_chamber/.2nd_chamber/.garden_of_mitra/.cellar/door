@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+key=4
+
+echo -e "The cellar door is locked!\nYou need the proper key to enter!"
+
+echo "How many '.rune' shards did you find? Enter the key value: "
+read -r val
+
+if [[ $val != "$key" ]]; then
+	echo "Wrong! Sweep the whole cellar with « find . -name '*.rune' | wc -l » and try again."
+	exit 0
+else
+	echo "Correct! The cellar door swings open with a groan!"
+fi
+
+cat <<'EOF' >spell_of_finding
+-----------------------------------------------------------------------------------------
+--                                                                                     --
+-- You have mastered the basics of the 'find' spell!                                   --
+--                                                                                     --
+-- A few more powers worth carrying with you:                                          --
+--                                                                                     --
+-- « find . -name '*.rune' »   match by a pattern, using * as a wildcard.              --
+-- « find . -type f »          show only files.                                        --
+-- « find . -type d »          show only directories (rooms).                          --
+-- « find . -iname '*.RUNE' »  match by name, ignoring upper / lower case.             --
+--                                                                                     --
+-- Combine them: « find . -type f -name '*.rune' » finds rune FILES only.              --
+--                                                                                     --
+-- Remember: 'grep' grabs lines from INSIDE files, while 'find' locates the files      --
+-- themselves. Two different spells for two different hunts.                            --
+--                                                                                     --
+-----------------------------------------------------------------------------------------
+EOF
+
+echo -e "\nYou found a « spell_of_finding »! Read it with « cat spell_of_finding »"
+echo -e "A treasury has opened in this room. Look around with « ls »\n"
+
+mv .treasury treasury 2>/dev/null
