@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+if [[ $1 == "silence" ]]; then
+    cat <<EOF
+
+The ancient door rumbles open...
+
+You spoke the word hidden in the shadows,
+and the mirrors shatter into harmless dust.
+
+The hall of mirrors was an illusion all along.
+Only those who look beneath the surface
+can see through deception.
+
+Beyond the shattered glass, a cellar is revealed.
+
+EOF
+    mv .cellar cellar 2>/dev/null
+    exit 0
+fi
+
+cat <<EOF
+
+The door remains sealed.
+
+You hear a faint whisper echoing
+through the mirrors:
+
+   "Only those who look beneath
+    the surface may pass..."
+
+Hint: Investigate what others overlook.
+      « ls -a » to find hidden things,
+      then « cat » what you discover.
+
+EOF

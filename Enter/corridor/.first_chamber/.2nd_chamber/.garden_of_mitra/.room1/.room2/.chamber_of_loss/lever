@@ -1,4 +1,16 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
-mkdir ../../../cellar 2>/dev/null 
+cat <<EOF
+
+You pull the lever...
+
+The wall behind you rumbles and shifts.
+A hidden passage is revealed:
+the Hall of Mirrors.
+
+Something glimmers inside...
+
+EOF
+
+mv .hall_of_mirrors hall_of_mirrors 2>/dev/null
 
